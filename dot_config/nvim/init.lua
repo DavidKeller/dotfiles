@@ -1,9 +1,6 @@
 -- Color
 vim.cmd.colorscheme('habamax')
 
--- Ruler
-vim.opt.ruler = true
-
 -- Scroll
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -17,6 +14,7 @@ vim.opt.incsearch = true
 -- Files
 vim.opt.swapfile = false
 
+-- The war isn't finished
 vim.opt.colorcolumn = '80'
 
 -- Tab
@@ -25,9 +23,11 @@ vim.opt.shiftwidth = 2
 vim.opt.smartindent = true
 vim.opt.tabstop = 2
 
--- Languages
-vim.opt.makeprg = 'ninja'
+-- Diagnostic
 vim.diagnostic.config({ virtual_text = true })
+
+-- LSP - clang
+vim.opt.makeprg = 'ninja'
 vim.lsp.config['clangd'] = {
   cmd = {
     'clangd',

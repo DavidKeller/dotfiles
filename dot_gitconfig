@@ -1,0 +1,8 @@
+[user]
+  signingkey = F7B57F6A975D66C1
+  name = David Keller
+  email = david.keller@litchis.fr
+[commit]
+  gpgsign = true
+[init]
+  defaultBranch = main

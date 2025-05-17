@@ -1,6 +1,10 @@
 -- Color
 vim.cmd.colorscheme('habamax')
 
+
+-- Mouse
+vim.opt.mouse = ''
+
 -- Scroll
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -13,9 +17,6 @@ vim.opt.incsearch = true
 
 -- Files
 vim.opt.swapfile = false
-
--- The war isn't finished
-vim.opt.colorcolumn = '80'
 
 -- Tab
 vim.opt.expandtab = true

@@ -1,0 +1,7 @@
+ExtraArgs:
+  - -stdlib=libc++
+CompileFlags:
+  Add: -Wno-unknown-warning-option
+  Remove:
+    - -f*
+    - -m*

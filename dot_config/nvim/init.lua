@@ -27,8 +27,9 @@ vim.opt.tabstop = 2
 -- Diagnostic
 vim.diagnostic.config({ virtual_text = true })
 
--- LSP - clang
 vim.opt.makeprg = 'ninja'
+
+-- LSP - clang
 vim.lsp.config['clangd'] = {
   cmd = {
     'clangd',
@@ -41,3 +42,31 @@ vim.lsp.config['clangd'] = {
   filetypes = { 'c', 'cpp' },
 }
 vim.lsp.enable('clangd')
+
+-- LSP - python
+vim.lsp.config['basedpyright'] = {
+  cmd = {
+    'basedpyright-langserver',
+    '--stdio',
+  },
+  root_markers = {
+    'pyproject.toml',
+    'setup.py',
+    'setup.cfg',
+    'requirements.txt',
+    'Pipfile',
+    'pyrightconfig.json',
+    '.git',
+  },
+  filetypes = { 'python' },
+  settings = {
+    basedpyright = {
+      analysis = {
+        autoSearchPaths = true,
+        useLibraryCodeForTypes = true,
+        diagnosticMode = 'openFilesOnly',
+      },
+    },
+  }
+}
+vim.lsp.enable('basedpyright')

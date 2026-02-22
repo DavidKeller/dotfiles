@@ -1,6 +1,5 @@
 -- Color
-vim.cmd.colorscheme('habamax')
-
+vim.cmd.colorscheme('retrobox')
 
 -- Mouse
 vim.opt.mouse = ''

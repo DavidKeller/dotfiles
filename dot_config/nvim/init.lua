@@ -8,7 +8,6 @@ vim.opt.mouse = ''
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 8
-vim.opt.wrap = false
 
 -- Highlight
 vim.opt.hlsearch = false
@@ -36,6 +35,7 @@ vim.lsp.config['clangd'] = {
     '--enable-config',
     '--background-index',
     '--offset-encoding=utf-8',
+    '--compile-commands-dir=.',
   },
   root_markers = { 'compile_commands.json' },
   filetypes = { 'c', 'cpp' },
